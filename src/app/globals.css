@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+.gradient-text {
+    background: linear-gradient(180deg, #FFFFFF 0%, #949494 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+.gradient-text span {
+  color: #FF387A;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #FF387A;
+}
+
+@layer utilities {
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-appearance: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #FF387A;
+  border-radius: 5px;
+}

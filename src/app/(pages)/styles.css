@@ -1,0 +1,25 @@
+.slick-current:has(div > main.profile) {
+  transform: scale(0.9);
+  z-index: 10;
+  transition: transform 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+}
+
+.slick-current:has(div > main.profile) + .slick-slide:has(div > main.profile) {
+  transform: scale(1);
+  z-index: 20;
+  transition: transform 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+}
+
+.slick-current:has(div > main.profile) + .slick-slide + .slick-slide:has(div > main.profile) {
+  transform: scale(0.9);
+  z-index: 10;
+  transition: transform 0.4s ease, opacity 0.4s ease, z-index 0.4s ease;
+}
+
+.slick-list {
+  padding: 0 !important;
+}
+
+.slick-list:not(:has(.slick-slide > div > main.profile)) {
+  padding: 40px !important;
+}
